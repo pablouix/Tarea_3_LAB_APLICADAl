@@ -1,0 +1,35 @@
+<Window x:Class="Tarea_3.UI.Registros.rCarreras"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tarea_3.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de Carreras"
+        Height="380" Width="389">
+
+    <Grid >
+         <StackPanel  Margin="16">
+
+            <TextBlock Text = "Carrera" FontSize="16"/>
+
+            <StackPanel>
+                <TextBlock Text = "Id Carrera"/>
+                <TextBox Text = "{Binding CarreraId}" x:Name="TextBoxIdCarrera"/>
+                <Button Content="Buscar" Click="Click_btnBuscar"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text = "Nombre"/>
+                <TextBox Text = "{Binding Nombre}" x:Name="TextBoxNombreCarrera"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,16,0,16" HorizontalAlignment="Center">
+                <Button Content="📄Nuevo" Click="Click_btnNuevo"/>
+                <Button Content="💾Guardar" Click="Click_btnGuardar"/>
+                <Button Content="⛔Eliminar" Click="Click_btnEliminar"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
